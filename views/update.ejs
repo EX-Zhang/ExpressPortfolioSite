@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Update</title>
+
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <link rel='stylesheet' href='/stylesheets/update.css' />
+
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <script src="/javascripts/jquery-3.6.3.min.js"></script>
+
+    <script src="/javascripts/update.js"></script>
+
+    <script src="/javascripts/delete.js"></script>
+
+  </head>
+
+  <body>
+
+    <%- include('partials/navbar'); %>
+
+    <div class="content">
+
+      <br><br>
+
+      <h2>Update</h2><br>
+
+      <div class="form-group">
+
+        <div class="input-group mb-3 contact-info">
+
+          <div class="input-group-prepend info-label">
+        
+            <h4>Contact Name:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+
+          </div>
+
+          <input type="text" id="name" class="form-control" placeholder="Contact Name" aria-label="name" aria-describedby="basic-addon1" value="<%=contact.name%>">
+
+        </div>
+
+        <div id="name-alert" class="input-alert" style="display:none;">
+
+          <br>
+
+          <p style="color:red;">Contact Name cannot be Empty.</p>
+          
+        </div>
+
+        <br><br>
+
+        <div class="input-group mb-3 contact-info">
+
+          <div class="input-group-prepend info-label">
+        
+            <h4>Contact Number:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+
+          </div>
+
+          <input type="text" id="number" class="form-control" placeholder="Contact Number" aria-label="number" aria-describedby="basic-addon1" value="<%=contact.number%>">
+
+        </div>
+
+        <div id="number-alert" class="input-alert" style="display:none;">
+
+          <br>
+
+          <p style="color:red;">Contact Number cannot be Empty.</p>
+          
+        </div>
+
+        <br><br>
+
+        <div class="input-group mb-3 contact-info">
+
+          <div class="input-group-prepend info-label">
+        
+            <h4>Email:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+
+          </div>
+
+          <input type="text" id="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" value="<%=contact.email%>">
+
+        </div>
+
+        <div id="email-alert" class="input-alert" style="display:none;">
+
+          <br>
+
+          <p style="color:red;">Contact Email cannot be Empty.</p>
+          
+        </div>
+
+      </div>
+
+      <br><br>
+
+      <button type="button" class="btn btn-primary" onclick="update_Contact('<%=contact.id%>')">Update</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button type="button" class="btn btn-danger" onclick="delete_Contact('<%=contact.id%>')">Delete</button>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button type="button" class="btn btn-secondary" onclick="window.location.href='/businesscontacts'">Cancel</button>
+      
+    </div>
+
+  </body>
+
+</html>

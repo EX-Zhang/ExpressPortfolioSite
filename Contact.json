@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d35"
+  },
+  "name": "Erxun Zhang",
+  "number": "306-341-6922",
+  "email": "mr.erxun.zhang@outlook.com"
+},{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d36"
+  },
+  "name": "Alice",
+  "number": "123456789",
+  "email": "alice@email.com"
+},{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d37"
+  },
+  "name": "Bob",
+  "number": "123456789",
+  "email": "bob@email.com"
+},{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d38"
+  },
+  "name": "Tom",
+  "number": "123456789",
+  "email": "tom@email.com"
+},{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d39"
+  },
+  "name": "Alice",
+  "number": "987654321",
+  "email": "alice@test.com"
+},{
+  "_id": {
+    "$oid": "63f68fc148b0aa416cc73d3b"
+  },
+  "name": "Tom",
+  "number": "987654321",
+  "email": "tom@test.com"
+}]

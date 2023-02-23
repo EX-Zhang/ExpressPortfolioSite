@@ -1,0 +1,20 @@
+
+<tr>
+
+  <td class="contact-info"><%=contact.name%></td>
+              
+  <td class="contact-info"><%=contact.number%></td>
+              
+  <td class="contact-info"><%=contact.email%></td>
+              
+  <td>
+
+    <button type="button" class="btn btn-primary" onclick='update_Contact("<%=contact.id%>")'>Update</button>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button type="button" class="btn btn-danger" onclick='delete_Contact("<%=contact.id%>")'>Delete</button>
+                
+  </td>
+              
+</tr>

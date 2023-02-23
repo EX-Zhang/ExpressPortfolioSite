@@ -12,6 +12,23 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// Connect MongoDB
+
+var mongoose = require('./config/mongoose.js');
+
+var db = mongoose();
+
+// Passport
+
+var passport = require('passport');
+
+var session = require('express-session');
+
+app.use(cookieParser());
+app.use(session({ secret: "need change" }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -33,6 +50,12 @@ app.use('/projects', require('./routes/projects'));
 app.use('/services', require('./routes/services'));
 
 app.use('/contact', require('./routes/contact'));
+
+app.use('/login', require('./routes/login'));
+
+app.use('/businesscontacts', require('./routes/businesscontacts'));
+
+app.use('/update', require('./routes/update'));
 
 app.use('/users', usersRouter);
 

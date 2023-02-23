@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Business Contacts List</title>
+
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <link rel='stylesheet' href='/stylesheets/businesscontacts.css' />
+
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <script src="/javascripts/jquery-3.6.3.min.js"></script>
+
+    <script src="/javascripts/delete.js"></script>
+
+    <script type="text/javascript">
+
+    function update_Contact(id) {
+
+        window.location.href = "/update?id=" + id;
+
+    }
+     
+    </script>
+
+  </head>
+
+  <body>
+
+    <%- include('partials/navbar'); %>
+
+    <div class="content">
+
+      <br><br>
+
+      <h3>Business Contacts List</h3><br>
+
+      <div>
+
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th scope="col">Contact Name</th>
+              <th scope="col">Contact Number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <% contacts.forEach(function(contact){%>
+
+              <%-include('partials/businesscontact', {'contact': contact,})%>
+                
+            <% }) %>
+            
+                        
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+    </div>
+
+  </body>
+
+</html>
