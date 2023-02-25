@@ -1,13 +1,15 @@
 
+// login.js, Erxun Zhang, 301331403, 2023-2-21
+
 function login() {
 
-  $(".input-alert").css("display", "none");
+  $(".input-alert").css("display", "none"); // Set all error alert unvisible
 
   let username = $("#username").val();
 
   let password = $("#password").val()
 
-  let valid_input = true;
+  let valid_input = true; // Check if the input is valid
 
   if (username.length === 0) {
 
@@ -25,7 +27,7 @@ function login() {
 
   }
 
-  if (!valid_input) {
+  if (!valid_input) { // If the input is invalid, stop the function
 
     return;
 

@@ -1,4 +1,6 @@
 
+// delete.js, Erxun Zhang, 301331403, 2023-2-21
+
 function delete_Contact(id) {
 
   $.ajax({

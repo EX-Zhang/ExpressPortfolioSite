@@ -1,5 +1,7 @@
 
-.contact-info{
+/* update.js, Erxun Zhang, 301331403, 2023-2-21 */
+
+.contact-info{ /* Style of the input */
 
     width: 40%;
     
@@ -7,7 +9,7 @@
     
 }
 
-.info-label{
+.info-label{ /* Style of the label before the input */
 
     width: 250px;
 

@@ -1,4 +1,6 @@
 
+// businesscontacts.js, Erxun Zhang, 301331403, 2023-2-21
+
 var express = require('express');
 
 var router = express.Router();
@@ -8,6 +10,8 @@ var mongoose = require('mongoose');
 var Contact = mongoose.model("Contact");
 
 router.get('/', function (req, res, next) {
+
+  // if unanthenticated, redirect to login page
 
   if (req.isUnauthenticated()) {
 
@@ -27,7 +31,7 @@ router.get('/', function (req, res, next) {
 
 module.exports = router;
 
-function get_Contacts(results) {
+function get_Contacts(results) { // Change the results of mongo to data for the front end
 
   let contacts = [];
 
@@ -37,7 +41,7 @@ function get_Contacts(results) {
 
     let contact = {};
 
-    contact["id"] = result["_id"].toString();
+    contact["id"] = result["_id"].toString(); // ID Object to the string
 
     contact["name"] = result["name"];
 

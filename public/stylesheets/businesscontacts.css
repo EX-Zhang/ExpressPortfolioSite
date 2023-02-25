@@ -1,5 +1,7 @@
 
-.contact-info{
+/* businesscontacts.js, Erxun Zhang, 301331403, 2023-2-21 */
+
+.contact-info{ /* Set the text in the table at the middle vertically */
 
     vertical-align: middle;
     

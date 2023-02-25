@@ -1,3 +1,6 @@
+
+// update.js, Erxun Zhang, 301331403, 2023-2-21
+
 var express = require('express');
 
 var router = express.Router();
@@ -7,6 +10,8 @@ var mongoose = require('mongoose');
 var Contact = mongoose.model("Contact");
 
 router.get('/', function (req, res, next) {
+
+  // If unautheticated, redirect to login page
 
   if (req.isUnauthenticated()) {
 
@@ -26,6 +31,8 @@ router.get('/', function (req, res, next) {
 
 });
 
+// Handle the request for delete contact
+
 router.post('/delete', function (req, res, next) {
 
   Contact.findByIdAndRemove(req.body.id, (err, result) => {
@@ -43,6 +50,8 @@ router.post('/delete', function (req, res, next) {
   });
 
 });
+
+// Handle the request for update
 
 router.post('/update', function (req, res, next) {
 

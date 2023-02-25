@@ -1,4 +1,6 @@
 
+// passport.js, Erxun Zhang, 301331403, 2023-2-21
+
 var passport = require('passport');
 
 var LocalStrategy = require('passport-local').Strategy;

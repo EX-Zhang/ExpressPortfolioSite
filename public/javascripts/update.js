@@ -1,7 +1,9 @@
 
+// update.js, Erxun Zhang, 301331403, 2023-2-21
+
 function update_Contact(id) {
 
-  $(".input-alert").css("display", "none");
+  $(".input-alert").css("display", "none"); // Set all error alert unvisible
 
   let name = $("#name").val();
 
@@ -9,7 +11,7 @@ function update_Contact(id) {
 
   let email = $("#email").val();
 
-  let valid_input = true;
+  let valid_input = true; // Check if the input is valid
 
   if (name.length === 0) {
 
@@ -35,7 +37,7 @@ function update_Contact(id) {
 
   }
 
-  if (!valid_input) {
+  if (!valid_input) { // If the input is invalid, stop the function
 
     return;
 

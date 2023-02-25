@@ -1,4 +1,6 @@
 
+// mongoose.js, Erxun Zhang, 301331403, 2023-2-21
+
 // Connect MongoDB
 var mongoose = require('mongoose');
 
